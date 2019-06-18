@@ -1,0 +1,188 @@
+{% include "includes/base.html" %}
+{% load static %}
+
+<style>
+    /* .btn-primary { background-color: rgb(18, 39, 131); border-color: blue; } */
+</style>
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">EBC</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-center">
+        <div class="d-inline-flex p-2"><h2>SERVICES</h2></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-lg" style="border-bottom: 6px solid #f50505;">
+                <div class="card-body">
+                    <div class="d-flex flex-column">
+                        <div class="p-2">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-inline-flex p-2">
+                                    <span class="flaticon-blueprint icon"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="p-2">
+                            This is some text within a card body.
+                        </div>
+                        <div class="p-2">
+                            <button type="button" class="btn btn-outline-primary btn-sm">Suite</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-lg" style="border-bottom: 6px solid #f50505;">
+                <div class="card-body">
+                    <div class="d-flex flex-column">
+                        <div class="p-2">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-inline-flex p-2">
+                                    <span class="flaticon-building-1 icon"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="p-2">
+                            This is some text within a card body.
+                        </div>
+                        <div class="p-2">
+                            <button type="button" class="btn btn-outline-primary btn-sm">Suite</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-lg" style="border-bottom: 6px solid #f50505;">
+                <div class="card-body">
+                    <div class="col">
+                        <div class="d-flex flex-column">
+                            <div class="p-2">
+                                <div class="d-flex justify-content-center">
+                                    <div class="d-inline-flex p-2">
+                                        <span class="flaticon-crane icon"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="p-2">
+                                This is some text within a card body.
+                            </div>
+                            <div class="p-2">
+                                <button type="button" class="btn btn-outline-primary btn-sm">Suite</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center m-5">
+        <div class="d-inline-flex p-2">
+            <button class="btn btn-primary">
+                Tous les Services
+            </button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-inline-flex p-2"><h2>PROJETS RECENTS</h2></div>
+    </div>
+    <div class="row">
+        {% for item in works_images %}
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+                </div>
+            </div>
+        {% endfor %}
+        
+    </div>
+    <div class="d-flex justify-content-center m-5">
+        <div class="d-inline-flex p-2">
+            <button class="btn btn-primary">
+                Tous les Projets    
+            </button
+        ></div>
+    </div>
+    <div class="d-flex flex-column">
+        <div class="p-2">
+            <div class="d-flex justify-content-center mt-5">
+                <div class="d-inline-flex p-2">
+                    <div class="text-center" style="width: 20rem;">
+                        <img src="media/logo/20190516_095056.jpg" class="rounded-circle w-75" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="d-flex justify-content-center">
+                <div class="d-inline-flex p-2" style="width: 20em;">
+                    <!-- <button class="btn btn-primary"> -->
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit
+                        quam minima
+                        expedita atque corrupti reiciendis.
+                    <!-- </button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</div>
+<hr>
+<footer class="footer">
+    <div class="container mt-5">
+        
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <p class="copyright">Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+                    with bootstrap by <a href="https://baysim.com"
+                        target="_blank">Baysim</a></p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+            <div class="col-md-3">
+                {% for item in enterprise %}
+                    <ul class="list-unstyled footer-link">
+                        <li class="d-flex"><span class="mr-3">A:</span><span class="text-black">{{item.rue_1}}, {{item.rue_1}},
+                            </span></li>
+                        <li class="d-flex"><span class="mr-3">T:</span><span class="text-black">{{item.phone_number_1}}</span></li>
+                        <li class="d-flex"><span class="mr-3">E:</span><span class="text-black">{{item.email}}</span></li>
+                    </ul>
+                {% endfor %}
+                
+            </div>
+            <div class="col-md-3">
+                <h3>Quick Links</h3>
+                <ul class="list-unstyled footer-link">
+                    <li><a href="#">A Propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Realisations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h3>Social</h3>
+                <ul class="list-unstyled footer-link d-flex footer-social">
+                    <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+

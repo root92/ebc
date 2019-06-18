@@ -1,0 +1,1 @@
+web: gunicorn ebc_website.wsgi --log-file -

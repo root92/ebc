@@ -1,0 +1,137 @@
+{% include 'includes/base.html' %}
+{% load static %}
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Contactez Nous</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-column">
+                        <div class="p-2">
+                            <div class="d-flex justify-content-center">
+                                <div class="text-center">
+                                    <img src="../media/logo/logo.jpg" class="rounded w-75" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-inline-flex p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit
+                                    quam minima
+                                    expedita atque corrupti reiciendis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <div class="d-flex justify-content-center">...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Nom</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Nom">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputLastName">Prenom</label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="Prenom">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+<footer class="footer">
+    <div class="container mt-5">
+
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <p class="copyright">Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+                    made
+                    with bootstrap by <a href="https://baysim.com" target="_blank">Baysim</a></p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+            <div class="col-md-3">
+                {% for item in enterprise %}
+                <ul class="list-unstyled footer-link">
+                    <li class="d-flex"><span class="mr-3">A:</span><span class="text-black">{{item.rue_1}},
+                            {{item.rue_1}},
+                        </span></li>
+                    <li class="d-flex"><span class="mr-3">T:</span><span
+                            class="text-black">{{item.phone_number_1}}</span></li>
+                    <li class="d-flex"><span class="mr-3">E:</span><span class="text-black">{{item.email}}</span></li>
+                </ul>
+                {% endfor %}
+
+            </div>
+            <div class="col-md-3">
+                <h3>Quick Links</h3>
+                <ul class="list-unstyled footer-link">
+                    <li><a href="#">A Propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Realisations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h3>Social</h3>
+                <ul class="list-unstyled footer-link d-flex footer-social">
+                    <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

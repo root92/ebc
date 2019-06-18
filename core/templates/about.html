@@ -1,0 +1,58 @@
+{% include 'includes/base.html' %}
+{% load static %}
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">A Propos De Nous</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+</div>
+<hr>
+<footer class="footer">
+    <div class="container mt-5">
+
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <p class="copyright">Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+                    made
+                    with bootstrap by <a href="https://baysim.com" target="_blank">Baysim</a></p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+            <div class="col-md-3">
+                {% for item in enterprise %}
+                <ul class="list-unstyled footer-link">
+                    <li class="d-flex"><span class="mr-3">A:</span><span class="text-black">{{item.rue_1}},
+                            {{item.rue_1}},
+                        </span></li>
+                    <li class="d-flex"><span class="mr-3">T:</span><span
+                            class="text-black">{{item.phone_number_1}}</span></li>
+                    <li class="d-flex"><span class="mr-3">E:</span><span class="text-black">{{item.email}}</span></li>
+                </ul>
+                {% endfor %}
+
+            </div>
+            <div class="col-md-3">
+                <h3>Quick Links</h3>
+                <ul class="list-unstyled footer-link">
+                    <li><a href="#">A Propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Realisations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h3>Social</h3>
+                <ul class="list-unstyled footer-link d-flex footer-social">
+                    <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
